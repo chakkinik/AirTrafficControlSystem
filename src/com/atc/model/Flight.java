@@ -1,13 +1,21 @@
 package com.atc.model;
 
-public class Flight {
-	
-	private String flightNo;
-	
-	private String source;
-	
-	private String destination;
-	
-	
+import com.atc.service.Command;
+import com.atc.service.IATCService;
+
+public class Flight implements Command {
+
+	public IATCService atcService;
+
+	public String flightNo;
+
+	public String source;
+
+	public String destination;
+
+	@Override
+	public void land() {
+
+	}
 
 }

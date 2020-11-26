@@ -1,10 +1,13 @@
 package com.atc.service;
 
+import com.atc.model.Flight;
+import com.atc.model.Runway;
+
 public interface IATCService {
 	
-	public void registerFligt();
+	public void registerFlight(Flight flight);
 	
-	public void registerRunway();
+	public void registerRunway(Runway runway);
 	
 	public boolean isLandinOk();
 	
