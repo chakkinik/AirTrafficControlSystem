@@ -28,7 +28,13 @@ public class IATCServiceImpl implements IATCService{
 
 	@Override
 	public boolean isLandinOk() {
+	 // check if tunway available 
 		return false;
+	}
+
+	@Override
+	public void land() {
+		//occpy runway and 
 	}
 
 }

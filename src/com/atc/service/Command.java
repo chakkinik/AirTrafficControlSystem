@@ -1,5 +1,5 @@
 package com.atc.service;
 
 public interface Command {
-	public void land();
+	public boolean land();
 }

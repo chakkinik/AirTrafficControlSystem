@@ -11,5 +11,7 @@ public interface IATCService {
 	
 	public boolean isLandinOk();
 	
+	public void land();
+	
 
 }

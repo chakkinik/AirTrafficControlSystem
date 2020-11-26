@@ -14,8 +14,12 @@ public class Flight implements Command {
 	public String destination;
 
 	@Override
-	public void land() {
-
+	public boolean land() {
+		if(atcService.isLandinOk()) {
+			atcService.land();
+			return true;
+		}
+		return false;
 	}
 
 }
