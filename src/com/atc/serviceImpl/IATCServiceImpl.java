@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 
 import com.atc.model.Flight;
 import com.atc.model.Runway;
@@ -29,12 +31,28 @@ public class IATCServiceImpl implements IATCService{
 	@Override
 	public boolean isLandinOk() {
 	 // check if tunway available 
+		Set<Entry<Integer, Boolean>> entrySet = runwayAvailable.entrySet();
+		for(Entry eachRunway:entrySet) {
+			Boolean value =(Boolean) eachRunway.getValue();
+			if(value) {
+				return true;
+			}
+		}
 		return false;
 	}
 
 	@Override
 	public void land() {
 		//occpy runway and 
+		
+		Set<Entry<Integer, Boolean>> entrySet = runwayAvailable.entrySet();
+		for(Entry eachRunway:entrySet) {
+			Boolean value =(Boolean) eachRunway.getValue();
+			if(value) {
+				eachRunway.setValue(false);
+			}
+		}
+		
 	}
 
 }

@@ -7,6 +7,10 @@ public class Flight implements Command {
 
 	public IATCService atcService;
 
+	public Flight(String flightNo){
+		this.flightNo=flightNo;
+	}
+	
 	public String flightNo;
 
 	public String source;
